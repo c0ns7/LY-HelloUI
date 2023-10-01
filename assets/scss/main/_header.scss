@@ -1,0 +1,112 @@
+.header {
+    padding: 35px 0;
+
+    .wrapper {
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                font-size: 36px;
+                font-weight: 500;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .burger {
+                display: none;
+                
+                i {
+                    font-size: 25px;
+                }
+
+                @media screen and (max-width: 1100px) {
+                    & {
+                        display: block;
+                    }
+                }
+            }
+
+            .menu {
+                @media screen and (max-width: 1100px) {
+                    & {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+
+                        left: -100%;
+                        top: 0;
+                        height: 100%;
+                        width: 250px;;
+
+                        background-color: #e6e6e6;
+
+                        transition: .5s ease;
+
+                        &.active {
+                            left: 0;
+                        }
+                    }
+                }
+
+                .list {
+                    display: flex;
+                    align-items: center;
+
+                    gap: 70px;
+
+                    @media screen and (max-width: 1100px) {
+                        & {
+                            flex-direction: column;
+
+                            padding: 50px 0;
+                        }
+                    }
+
+                    .item {
+                        .link {
+                            font-size: 16px;
+
+                            @media screen and (max-width: 1100px) {
+                                & {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                @media screen and (max-width: 1100px) {
+                    & {
+                        display: none;
+                    }
+                }
+
+                .list {
+                    display: flex;
+                    align-items: center;
+
+                    gap: 35px;
+
+                    .item {
+                        .link {
+                            font-size: 18px;
+
+                            &.tfr {
+                                color: #fff;
+                                font-weight: 500;
+
+                                padding: 13px 40px;
+
+                                border-radius: 30px;
+                                background: #0555FF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
